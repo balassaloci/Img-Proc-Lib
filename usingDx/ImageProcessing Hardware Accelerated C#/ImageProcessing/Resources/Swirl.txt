@@ -1,0 +1,32 @@
+float2 Center : register(C0);
+float SpiralStrength : register(C1);
+float AspectRatio : register(C2);
+sampler2D input : register(S0);
+
+float4 main(float2 uv : TEXCOORD) : COLOR
+{
+	float2 dir = uv - Center;
+	dir.y /= AspectRatio;
+	float dist = length(dir);
+	float angle = atan2(dir.y, dir.x);
+
+	float newAngle = angle + SpiralStrength * dist;
+	float2 newDir;
+	sincos(newAngle, newDir.y, newDir.x);
+	newDir.y *= AspectRatio;
+	
+	float2 samplePoint = Center + newDir * dist;
+	bool isValid = all(samplePoint >= 0 && samplePoint <= 1);
+	return isValid ? tex2D(input, samplePoint) : float4(0, 0, 0, 0);
+}
+
+
+
+technique Tech
+{
+	pass Pss
+	{
+	pixelshader = compile ps_2_0 main();
+	}
+}
+

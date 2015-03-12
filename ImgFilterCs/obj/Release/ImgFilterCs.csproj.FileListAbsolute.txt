@@ -1,0 +1,9 @@
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\bin\Release\ImgFilterCs.exe.config
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\bin\Release\ImgFilterCs.exe
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\bin\Release\ImgFilterCs.pdb
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Release\ImgFilterCs.Form1.resources
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Release\ImgFilterCs.Properties.Resources.resources
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Release\ImgFilterCs.csproj.GenerateResource.Cache
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Release\ImgFilterCs.exe
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Release\ImgFilterCs.pdb
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Release\ImgFilterCs.csprojResolveAssemblyReference.cache

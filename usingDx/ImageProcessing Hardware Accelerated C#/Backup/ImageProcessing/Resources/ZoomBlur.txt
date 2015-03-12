@@ -1,0 +1,31 @@
+sampler2D  input : register(S0);
+
+float progress  : register(c0);
+float2 center : register(c1);
+
+float4 main(float2 uv : TEXCOORD) : COLOR
+{
+
+float BlurAmount =- progress * .4;
+ float4 c = 0;    
+ uv -= center ;
+
+ for (int i = 0; i < 14; i++)  {
+  float scale = 1.0 + BlurAmount * (i / 13.0);
+  c += tex2D(input , uv * scale + center );
+ }
+   
+ c /= 14;
+  
+return c;
+}
+
+
+technique Tech
+{
+	pass Pss
+	{
+	pixelshader = compile ps_2_0 main();
+	}
+}
+

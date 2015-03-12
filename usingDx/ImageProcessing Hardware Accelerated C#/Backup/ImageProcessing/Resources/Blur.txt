@@ -1,0 +1,38 @@
+float Amount : register(C1);
+sampler2D  Texture1Sampler : register(S0);
+
+float4 main(float2 uv : TEXCOORD) : COLOR
+{
+    float4 c = 0;
+    float r360 =  0.0174533f;
+    float rad ;
+    float xOffset;
+    float yOffset;
+
+	c += tex2D(Texture1Sampler, uv);
+	float2 v; 
+ 
+    for(int i=0; i<8; i++)
+    {
+		rad= i*45 * r360;
+		xOffset = cos(rad);
+		yOffset = sin(rad);
+        v.x = uv.x -( Amount * xOffset);
+        v.y = uv.y -( Amount * yOffset);
+        c += tex2D(Texture1Sampler, v);
+    }
+   
+    c /= 9;
+    
+    return c;
+}
+
+
+technique Tech
+{
+	pass Pss
+	{
+	pixelshader = compile ps_2_0 main();
+	}
+}
+

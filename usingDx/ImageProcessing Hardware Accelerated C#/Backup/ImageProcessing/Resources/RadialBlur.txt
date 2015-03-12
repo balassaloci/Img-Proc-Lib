@@ -1,0 +1,72 @@
+sampler2D  input : register(S0);
+
+float4 ms1  : register(c0);
+float2 offs1 : register(c1);
+
+float4 ms2  : register(c2);
+float2 offs2 : register(c3);
+
+float4 ms3  : register(c4);
+float2 offs3 : register(c5);
+
+
+float4 ms[9] : register(c6);
+float2 offs[9] : register(c15);
+
+
+float4 main(float2 uv : TEXCOORD) : COLOR
+{
+
+	float4 c = 0;
+	float x,y ;
+	float num,num2;
+
+for(int i=0; i<9;i++){
+	num = (uv.y * ms1.z) + offs1.x;
+	num2 = (uv.x * ms1.y) + offs1.y;
+	x *= ms1.x;
+	x += num;
+	y *= ms1.w;
+	y += num2;
+		c += tex2D(input,float2(x,y));
+
+}
+
+	x=uv.x; y = uv.y ;
+	num = (y * ms2.z) + offs2.x;
+	num2 = (x * ms2.y) + offs2.y;
+	x *= ms2.x;
+	x += num;
+	y *= ms2.w;
+	y += num2;
+	if (x <0 || y < 0 || x > 1 || y > 1)	c=0;	else	c += tex2D(input,float2(x,y));
+	
+	return c/9.0f;
+
+/*	
+if (x <0 || y < 0 || x > 1 || y > 1)	c=0;	else
+
+
+
+	x=uv.x; y = uv.y ;
+	num = (y * ms3.z) + offs3.x;
+	num2 = (x * ms3.y) + offs3.y;
+	x *= ms3.x;
+	x += num;
+	y *= ms3.w;
+	y += num2;
+	if (x <0 || y < 0 || x > 1 || y > 1)	c=0;	else	c += tex2D(input,float2(x,y));
+*/
+
+
+}
+
+
+technique Tech
+{
+	pass Pss
+	{
+	pixelshader = compile ps_2_0 main();
+	}
+}
+

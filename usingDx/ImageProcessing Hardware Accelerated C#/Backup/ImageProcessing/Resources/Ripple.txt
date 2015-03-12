@@ -1,0 +1,37 @@
+float2 Center : register(C0);
+float Amplitude : register(C1);
+float Frequency: register(C2);
+float Phase: register(C3);
+float AspectRatio : register(C4);
+sampler2D Texture1Sampler : register(S0);
+
+float4 main(float2 uv : TEXCOORD) : COLOR
+{
+ 
+	float2 dir = uv - Center; // vector from center to pixel
+	dir.y /= AspectRatio;
+	float dist = length(dir);
+	dir /= dist;
+	dir.y *= AspectRatio;
+
+	float2 wave;
+	sincos(Frequency * dist + Phase, wave.x, wave.y);
+		
+	float falloff = saturate(1 - dist);
+	falloff *= falloff;
+		
+	dist += Amplitude * wave.x * falloff;
+	float2 samplePoint = Center + dist * dir;
+	float4 color = tex2D(Texture1Sampler, samplePoint);
+
+	float lighting = 1 - Amplitude * 0.2 * (1 - saturate(wave.y * falloff));
+	color.rgb *= lighting;
+	return color;
+}
+technique Tech
+{
+	pass Pss
+	{
+	pixelshader = compile ps_2_0 main();
+	}
+}

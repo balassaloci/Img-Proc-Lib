@@ -1,0 +1,31 @@
+float Angle : register(C0);
+float Amount : register(C1);
+sampler2D  Texture1Sampler : register(S0);
+
+float4 main(float2 uv : TEXCOORD) : COLOR
+{
+    float4 c = 0;
+    float rad = Angle * 0.0174533f;
+    float xOffset = cos(rad);
+    float yOffset = sin(rad);
+
+    for(int i=0; i<16; i++)
+    {
+        uv.x = uv.x - Amount/16 * xOffset;
+        uv.y = uv.y - Amount/16 * yOffset;
+        c += tex2D(Texture1Sampler, uv);
+    }
+    c /= 16;
+    
+    return c;
+}
+
+
+technique Tech
+{
+	pass Pss
+	{
+	pixelshader = compile ps_2_0 main();
+	}
+}
+

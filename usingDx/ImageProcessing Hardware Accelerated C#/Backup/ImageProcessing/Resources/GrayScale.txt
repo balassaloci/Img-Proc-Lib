@@ -1,0 +1,25 @@
+sampler2D input : register(s0);
+
+float4 main(float2 uv : TEXCOORD) : COLOR 
+{ 
+		
+	float4 color; 
+	color= tex2D( input , uv.xy); 
+		
+    color.r = (color.r +color.g + color.b)/3.0f;
+    color.g = color.r;
+    color.b = color.r;
+	return color; 
+}
+
+
+
+
+technique Tech
+{
+	pass Pss
+	{
+	pixelshader = compile ps_2_0 main();
+	}
+}
+

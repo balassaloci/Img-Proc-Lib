@@ -1,0 +1,65 @@
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\bin\Debug\Test.exe
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\bin\Debug\Test.pdb
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\bin\Debug\PhotoEditor.dll
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\bin\Debug\Microsoft.DirectX.dll
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\bin\Debug\Microsoft.DirectX.Direct3DX.dll
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\bin\Debug\Microsoft.DirectX.Direct3D.dll
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\bin\Debug\PhotoEditor.pdb
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\obj\Debug\Test.Form1.resources
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\obj\Debug\Test.exe
+C:\Users\sameh\Documents\Visual Studio 2008\Projects\PhotoEditor\Test\obj\Debug\Test.pdb
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\obj\Debug\ResolveAssemblyReference.cache
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\obj\Debug\Test.Form1.resources
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\obj\Debug\Test.Properties.Resources.resources
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\bin\Debug\Test.exe
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\bin\Debug\Test.pdb
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\bin\Debug\ImageProcessing.dll
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\bin\Debug\Microsoft.DirectX.dll
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\bin\Debug\Microsoft.DirectX.Direct3DX.dll
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\bin\Debug\Microsoft.DirectX.Direct3D.dll
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\bin\Debug\ImageProcessing.pdb
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\obj\Debug\Test.exe
+F:\Development DotNet\For Smart Presenter\PhotoEditor Hardware Accelerated\Test\obj\Debug\Test.pdb
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Test.exe
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Test.pdb
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\ImageProcessing.dll
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Microsoft.DirectX.dll
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Microsoft.DirectX.Direct3DX.dll
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Microsoft.DirectX.Direct3D.dll
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\ImageProcessing.pdb
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\ResolveAssemblyReference.cache
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.Form1.resources
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.Properties.Resources.resources
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.exe
+F:\Development DotNet\For Smart Presenter\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.pdb
+E:\desktop\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.exe
+E:\desktop\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.pdb
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.Form1.resources
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Test.exe
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Test.pdb
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\ImageProcessing.dll
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Microsoft.DirectX.Direct3D.dll
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Microsoft.DirectX.Direct3DX.dll
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Microsoft.DirectX.dll
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\ImageProcessing.pdb
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.exe
+C:\Users\sameh\Desktop\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.pdb
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Test.exe.config
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.exe
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Test.exe
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\Test.pdb
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\ImageProcessing.dll
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\bin\Debug\ImageProcessing.pdb
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.Form1.resources
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\usingDx\ImageProcessing Hardware Accelerated C#\Test\obj\Debug\Test.pdb

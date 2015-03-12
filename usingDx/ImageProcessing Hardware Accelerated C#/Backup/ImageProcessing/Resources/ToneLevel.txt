@@ -1,0 +1,23 @@
+float Levels : register(C0);
+sampler2D Texture1Sampler : register(S0);
+
+float4 main(float2 uv : TEXCOORD) : COLOR
+{
+	float4 color = tex2D( Texture1Sampler, uv );
+	color.rgb /= color.a;
+
+	int levels = floor(Levels);
+	color.rgb *= levels;
+	color.rgb = floor(color.rgb);
+	color.rgb /= levels;
+	color.rgb *= color.a;
+	return color;
+}
+
+technique Tech
+{
+	pass Pss
+	{
+	pixelshader = compile ps_2_0 main();
+	}
+}

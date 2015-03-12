@@ -1,0 +1,9 @@
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\bin\Debug\ImgFilterCs.exe.config
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\bin\Debug\ImgFilterCs.exe
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\bin\Debug\ImgFilterCs.pdb
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Debug\ImgFilterCs.csprojResolveAssemblyReference.cache
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Debug\ImgFilterCs.Form1.resources
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Debug\ImgFilterCs.Properties.Resources.resources
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Debug\ImgFilterCs.csproj.GenerateResource.Cache
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Debug\ImgFilterCs.exe
+C:\Users\Balassa\Documents\Visual Studio 2013\Projects\ImgFilterCs\ImgFilterCs\obj\Debug\ImgFilterCs.pdb
