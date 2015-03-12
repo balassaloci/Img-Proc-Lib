@@ -325,6 +325,7 @@ namespace ImgFilterCs
 
                 colorPoints.Remove(colorPoints[0]);              
 
+                //New line added
             }
         }
 
