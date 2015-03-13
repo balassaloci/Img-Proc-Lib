@@ -24,11 +24,7 @@ namespace ImgFilterCs
             orig = img;
         }
 
-       //init mask
-	//just a ranodom line
-	string k = "new pointless empty string";
-
-	
+       //init mask	
         public void setMask(float[,] newMask)
         {
             //maskSum = new int();
@@ -405,5 +401,3 @@ namespace ImgFilterCs
 
     }
 }
-
-//blabla

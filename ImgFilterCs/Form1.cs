@@ -87,7 +87,8 @@ namespace ImgFilterCs
 
             float[,] sharpen = { { 0, -1, 0 }, { -1, 5, -1 }, { 0, -1, 0 } };
 
-            //float[,] gaussian = { { 1/16, 1/8, 1/16 }, { 1/8, 1/4, 1/8 }, { 1/16, 1/8, 1/16 } };
+            float[,] gaussian = { { 1/16, 1/8, 1/16 }, { 1/8, 1/4, 1/8 }, { 1/16, 1/8, 1/16 } };
+
             float[,] random = { { -1, 0, 1 }, { -1, 0, 1 }, { -1, 0, 1 } };
 
             float[,] corner = {{-1, 0, 1},
@@ -97,9 +98,9 @@ namespace ImgFilterCs
 
             FilterLib filter = new FilterLib(img);
             
-            filter.ToBW();
+            //filter.ToBW();
 
-            pictureBox1.Image = filter.applyMask(corner);
+            pictureBox1.Image = filter.applyMask(gaussian);
 
             Cursor = Cursors.Default;
 
