@@ -81,17 +81,25 @@ namespace ImgFilterCs
             float v = (float)(1.0 / 9.0);
             float[,] boxBlur = { { v, v, v }, { v, v, v }, { v, v, v } };
             
-            float[,] edge = { { -1, -1, -1 }, { -1, 8, -1 }, { -1, -1, -1 } };
+            float[,] edge = { { -1, -1, -1 },
+                              { -1, 8, -1 },
+                              { -1, -1, -1 } };
 
             float[,] sharpen = { { 0, -1, 0 }, { -1, 5, -1 }, { 0, -1, 0 } };
 
             //float[,] gaussian = { { 1/16, 1/8, 1/16 }, { 1/8, 1/4, 1/8 }, { 1/16, 1/8, 1/16 } };
             float[,] random = { { -1, 0, 1 }, { -1, 0, 1 }, { -1, 0, 1 } };
 
+            float[,] corner = {{-1, 0, 1},
+                               {-2, 0, 2},
+                               {-1, 0, 1},};
+            
 
             FilterLib filter = new FilterLib(img);
+            
+            filter.ToBW();
 
-            pictureBox1.Image = filter.applyMask(random);
+            pictureBox1.Image = filter.applyMask(corner);
 
             Cursor = Cursors.Default;
 

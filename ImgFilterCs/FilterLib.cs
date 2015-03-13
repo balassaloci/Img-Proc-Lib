@@ -197,8 +197,6 @@ namespace ImgFilterCs
             return ret;
         }
 
-
-
         public Bitmap blobDetect(Color match, int treshold, int maxDistance)
         {
             Bitmap ret = (Bitmap)orig.Clone();
@@ -384,6 +382,22 @@ namespace ImgFilterCs
             return true;
         }
 
+        public void ToBW()
+        {
+            for (int i = 0; i < orig.Width; i++)
+            {
+                for (int j = 0; j < orig.Height; j++)
+                {
+                    int luma = orig.GetPixel(i, j).R + orig.GetPixel(i, j).G + orig.GetPixel(i, j).B;
+                    luma /=3;
+
+                    Color newPx = new Color();
+                    newPx = Color.FromArgb(luma, luma, luma);
+
+                    orig.SetPixel(i, j, newPx);
+                }
+            }
+        }
 
     }
 }
