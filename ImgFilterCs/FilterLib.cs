@@ -44,6 +44,24 @@ namespace ImgFilterCs
             
         }
 
+        public Bitmap treshold(Bitmap bmp, int min)
+        {
+            for (int i = 0; i < bmp.Width; i++) {
+                for (int j = 0; j < bmp.Height; j++) {
+                    if (bmp.GetPixel(i, j).R < min)
+                    {
+                        bmp.SetPixel(i, j, Color.Black);
+                    }
+                    else
+                    {
+                        bmp.SetPixel(i, j, Color.White);
+                    }
+                }
+            }
+
+            return bmp;
+        }
+
         public Bitmap applyMask(float[,] newMask)
         {
 

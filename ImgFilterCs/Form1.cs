@@ -93,18 +93,77 @@ namespace ImgFilterCs
 
             float[,] corner = {{-1, 0, 1},
                                {-2, 0, 2},
-                               {-1, 0, 1},};
+                               {-1, 0, 1}};
+
+            float v5 = (float)(1.0 / 5.0);
+
+            float[,] blur_corner = {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {v5, v5, v5, v5, v5}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}};
+
+
+            float[,] corner3 = {{-1, -2, -1},
+                               {0, 0, 0},
+                               {1, 2, 1}};
+
+            float[,] blur_corner3 = {{0, 0, v5, 0, 0}, {0, 0, v5, 0, 0}, {0, 0, v5, 0, 0}, {0, 0, v5, 0, 0}, {0, 0, v5, 0, 0}};
+
+
+            float vLine = (float)(1.0 / 5.0);
+
             
+
+            float[,] lineBlurFilter = { { vLine, vLine, vLine, vLine, vLine}};
+
+            float[,] corner2 = {{-3, 0, 3},
+                               {-10, 0, 10},
+                               {-3, 0, 3}};
+
 
             FilterLib filter = new FilterLib(img);
+            filter.ToBW();
             
-            //filter.ToBW();
+            FilterLib filter2 = new FilterLib(img);
+            filter2.ToBW();
+            
+            filter.orig = filter.applyMask(corner);
+            filter.orig = filter.applyMask(blur_corner);            
+            filter.orig = filter.treshold(filter.orig, 50);
+            Bitmap imga = filter.orig;
+            
+            filter2.orig = filter2.applyMask(corner3);
+            filter2.orig = filter2.applyMask(blur_corner3);
+            filter2.orig = filter2.treshold(filter2.orig, 50);
+            Bitmap imgb = filter2.orig;
 
-            pictureBox1.Image = filter.applyMask(gaussian);
+            img = sumImg(imga, imgb);           
 
+            
+            //filtered = filter.treshold(filtered, 100);
+            pictureBox1.Image = img;
             Cursor = Cursors.Default;
 
         }
+
+        Bitmap sumImg(Bitmap a, Bitmap b)
+        {
+            Bitmap output = new Bitmap(a.Width, a.Height);
+
+            for (int i = 0; i < a.Width; i++)
+            {
+                for (int j = 0; j < a.Height; j++)
+                {
+                    int newVal = a.GetPixel(i, j).R + b.GetPixel(i, j).R;
+                    if (newVal > 255)
+                    {
+                        newVal = 255;
+                    }
+
+                    output.SetPixel(i, j, Color.FromArgb(newVal, newVal, newVal));
+                }
+            }
+            
+            return output;
+        }
+
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -143,6 +202,86 @@ namespace ImgFilterCs
             //cursorPos.Text = string.Format("Cursor X:{0}, Y:{1}", e.X, e.Y);
 
         }
+
+
+        TrackLib tracker = new TrackLib();
+
+        private void LoadSequenceButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Please open first element in sequence";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = dialog.FileName;
+                
+                string formattedName = "", dir = "";
+
+                tracker.getFormattedName(dialog.FileName, ref dir, ref formattedName);
+                tracker.LoadSequence(formattedName, dir);
+
+                SequenceViewPB.Image = tracker.sequence.First();
+            }
+
+        }
+
+        private void SequenceViewPB_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point mouseLoc = new Point(e.X,e.Y);
+            Bitmap markerImage = (Bitmap)tracker.sequence[tracker.currentIndex()].Clone();
+
+            SequenceViewPB.Image = tracker.drawMarker(markerImage, mouseLoc, 10);
+        }
+
+        private void NextImgButton_Click(object sender, EventArgs e)
+        {
+            
+            //tracker.getNext(ref newImage);
+
+            //pictureBox1.Image = newImage;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            Int32 tresh = 0;
+            if (Int32.TryParse(textBox1.Text, out tresh))
+            {
+                Cursor = Cursors.WaitCursor;
+
+                Bitmap tresholded = new Bitmap(img.Width, img.Height);
+
+                for (int i = 0; i < img.Width; i++)
+                {
+                    for (int j = 0; j < img.Height; j++)
+                    {
+                        if (img.GetPixel(i, j).R < tresh)
+                        {
+                            tresholded.SetPixel(i, j, Color.Black);
+                        }
+                        else
+                        {
+                            tresholded.SetPixel(i, j, Color.White);
+                        }
+                    }
+                }
+
+                float v = (float)(1.0 / 9.0);
+                float[,] boxBlur = { { v, v, v }, { v, v, v }, { v, v, v } };
+                
+                float w = (float)(1.0 / 5.0);
+                float[,] lineBlur = { { 0, 0, w, 0, 0 }, { 0, 0, w, 0, 0 }, { 0, 0, w, 0, 0 }, { 0, 0, w, 0, 0 }, { 0, 0, w, 0, 0 } };
+
+                FilterLib filter = new FilterLib(tresholded);
+                tresholded = filter.applyMask(boxBlur);
+
+                pictureBox1.Image = tresholded;
+
+                Cursor = Cursors.Default;
+            }
+        }
+
+        
 
     }
 }
